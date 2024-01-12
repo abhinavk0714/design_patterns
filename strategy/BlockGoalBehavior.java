@@ -1,5 +1,22 @@
 package strategy;
+import java.util.random;
+public class BlockGoalBehavior implements DefenceBehavior, OffenceBehavior {
+    public void play() {
+        // Array of messages
+        String[] messages = {
+            "hand blocks the puck",
+            "catches the puck",
+            "blocks puck with knee pads",
+            "blocks puck with stick"
+        };
 
-public class BlockGoalBehavior implements DefenceBehavior { // also needs to implement OffenceBehavior
-    
+        // Create a Random object
+        Random random = new Random();
+
+        // Generate a random index to select a message
+        int randomIndex = random.nextInt(messages.length);
+
+        // Print the selected message
+        System.out.println(messages[randomIndex]);
+    }
 }
