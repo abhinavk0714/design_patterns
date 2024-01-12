@@ -32,7 +32,7 @@ public class Defenceman extends Player {
     }
 
     public String toString() {
-        return "plays the position: Defenceman";
+        return super.toString() + "plays the position: Defenceman";
     }
 
 }

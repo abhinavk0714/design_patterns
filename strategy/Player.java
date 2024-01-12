@@ -17,8 +17,8 @@ public abstract class Player {
     public abstract void setDefenceBehavior();
     public abstract void setOffenceBehavior();
 
-    public void play(boolean possesion) {
-        // idk what to do here??
+    public String play(boolean possesion) {
+        return firstName + lastName;
     }
 
     public String toString() {
