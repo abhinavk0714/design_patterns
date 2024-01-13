@@ -1,8 +1,4 @@
-import strategy.BlockBehavior;
-import strategy.ChasePuckBehavior;
-import strategy.PassBehavior;
-import strategy.Player;
-import strategy.SlapShotBehavior;
+package strategy;
 
 public class Defenceman extends Player {
 
@@ -10,7 +6,7 @@ public class Defenceman extends Player {
         super(firstName, lastName);
     }
 
-    public setOffenceBehavior() {
+    public void setOffenceBehavior() {
         // Generate a random number between 0 and 99
         int randomNumber3 = rand.nextInt(100);
 
@@ -22,7 +18,7 @@ public class Defenceman extends Player {
             offenceBehavior = new SlapShotBehavior();
     }
 
-    public setDefenceBehavior() {
+    public void setDefenceBehavior() {
         int randomNumber4 = rand.nextInt(2);
         
         if(randomNumber4 == 0)

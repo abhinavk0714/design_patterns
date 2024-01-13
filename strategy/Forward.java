@@ -1,8 +1,4 @@
-import strategy.BlockBehavior;
-import strategy.ChasePuckBehavior;
-import strategy.PassBehavior;
-import strategy.Player;
-import strategy.ShootBehavior;
+package strategy;
 
 public class Forward extends Player {
 
