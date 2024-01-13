@@ -4,6 +4,8 @@ public class Forward extends Player {
 
     public Forward(String firstName, String lastName) {
         super(firstName, lastName);
+        setDefenceBehavior();
+        setOffenceBehavior();
     }
 
     public void setOffenceBehavior() {

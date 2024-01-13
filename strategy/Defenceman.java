@@ -4,6 +4,8 @@ public class Defenceman extends Player {
 
     public Defenceman(String firstName, String lastName) {
         super(firstName, lastName);
+        setDefenceBehavior();
+        setOffenceBehavior();
     }
 
     public void setOffenceBehavior() {

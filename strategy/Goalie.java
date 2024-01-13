@@ -3,6 +3,8 @@ public class Goalie extends Player {
 
     public Goalie(String firstName, String lastName) {
         super(firstName, lastName);
+        setDefenceBehavior();
+        setOffenceBehavior();
     }
 
     public void setOffenceBehavior() {

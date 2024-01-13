@@ -1,8 +1,8 @@
 package strategy;
 // import java.util.random;
 public class BlockGoalBehavior implements DefenceBehavior, OffenceBehavior {
-    public void play() {
-        System.out.println("catches the puck");
+    public String play() {
+        return "catches the puck";
         // Array of messages
         // String[] messages = {
         //     "hand blocks the puck",
