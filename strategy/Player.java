@@ -12,16 +12,17 @@ public abstract class Player {
     public Player(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.rand = new Random();
     }
 
     public abstract void setDefenceBehavior();
     public abstract void setOffenceBehavior();
 
     public String play(boolean possesion) {
-        return firstName + lastName;
+        return "did something";
     }
 
     public String toString() {
-        return toString();
+        return firstName + " " + lastName + " ";
     }
 }
