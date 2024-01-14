@@ -19,10 +19,13 @@ public abstract class Player {
     public abstract void setOffenceBehavior();
 
     public String play(boolean possesion) {
-        if(possesion = true)
+        if(possesion = true) {
+            setOffenceBehavior();
             return offenceBehavior.play();
-        else
+        } else {
+            setDefenceBehavior();
             return defenceBehavior.play();
+        }   
     }
 
     public String toString() {
