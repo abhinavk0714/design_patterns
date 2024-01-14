@@ -1,8 +1,14 @@
 package strategy;
 
 import java.util.Random;
-
+/**
+ * Block goal behavior for players (goalie)
+ */
 public class BlockGoalBehavior implements DefenceBehavior, OffenceBehavior {
+    /**
+     * Creates a bunch of messages to display for the play
+     * @return prints a message at random from the string of messages
+     */
     public String play() {
         // Array of messages
         String[] messages = {
