@@ -17,17 +17,15 @@ public class Cartel extends Sighting implements Observer {
         // Store the updated sighting in the sightings ArrayList if needed
         Sighting updatedSighting = new Sighting(location, description, accomplices);
         sightings.add(updatedSighting);
-        // // Get the current state of Cartel
-        // String currentLocation = this.getLocation();
-        // String currentDetails = this.getDetails();
-
-        // // Store the updated sighting in the sightings ArrayList if needed
-        // Sighting updatedSighting = new Sighting(currentLocation, currentDetails, accomplices);
-        // sightings.add(updatedSighting);
-        // getLog();
     }
 
     public String getLog() {
-        return getLocation() + "(" + getDetails() + "), with " + getAccomplices();
+        String result = "";
+        for (Sighting sighting : sightings) {
+            String entry = String.format("%s (%s), with %s\n",
+                    sighting.getLocation(), sighting.getDetails(), sighting.getAccomplices());
+            result += entry;
+        }
+        return result;
     }
 }

@@ -25,9 +25,22 @@ public class Cook implements Subject {
     }
 
     public void enterSighting(String location, String description, String accomplices) {
-        notifyObservers(location, description, null);
+        ArrayList<String> accompliceList = new ArrayList<>();
+        if (accomplices != null && !accomplices.isEmpty()) {
+            // Split the comma-separated accomplices
+            String[] accompliceArray = accomplices.split(", ");
+    
+            // Add only unique accomplices to the list
+            for (String accomplice : accompliceArray) {
+                if (!accompliceList.contains(accomplice)) {
+                    accompliceList.add(accomplice);
+                }
+            }
+        }
+    
+        notifyObservers(location, description, new ArrayList<>(accompliceList));
     }
-
+    
     public String getName() {
         return name;
     }
