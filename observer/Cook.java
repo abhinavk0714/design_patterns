@@ -8,6 +8,7 @@ public class Cook implements Subject {
 
     public Cook(String name) {
         this.name = name;
+        this.observers = new ArrayList<>();
     }
 
     public void registerObserver(Observer observer) {

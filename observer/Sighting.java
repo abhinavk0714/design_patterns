@@ -14,15 +14,19 @@ public class Sighting {
     }
 
     public String getLocation() {
-        return this.location;
+        return location;
     }
 
     public String getDetails() {
-        return this.details;
+        return details;
     }
 
     public String getAccomplices() {
-        // return this.accomplices;
-        return null;
+        if (accomplices != null && !accomplices.isEmpty()) {
+            // Join accomplices using commas
+            return String.join(", ", accomplices);
+        } else {
+            return "No accomplices";
+        }
     }
 }
