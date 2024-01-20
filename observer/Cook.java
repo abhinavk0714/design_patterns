@@ -38,7 +38,7 @@ public class Cook implements Subject {
             }
         }
     
-        notifyObservers(location, description, new ArrayList<>(accompliceList));
+        notifyObservers(location, description, accompliceList);
     }
     
     public String getName() {

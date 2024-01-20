@@ -17,17 +17,21 @@ public class Police implements Observer {
     }
 
     public void update(String location, String description, ArrayList<String> accomplices) {
-        // Reset the accomplices list for each update
         this.locations.add(location);
-        this.notes = description;
-        this.people.clear();
-        this.people.addAll(accomplices);
-        // locations.add(location);
-        // notes += description + "\n"; // Append the new note to the existing notes
-    
+        
+        // Append the new note to the existing notes
+        if (!notes.isEmpty()) {
+            notes += "\n";
+        }
+        notes += description;
+
         // Check if accomplices is not null before adding to the people list
         if (accomplices != null) {
-            people.addAll(accomplices);
+            for (String accomplice : accomplices) {
+                if (!people.contains(accomplice)) {
+                    people.add(accomplice);
+                }
+            }
         }
     }
     
