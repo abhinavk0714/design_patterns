@@ -1,13 +1,20 @@
 package observer;
 
 import java.util.ArrayList;
-
+/**
+ * Police class that implements Observer
+ * @author abhinavk
+ */
 public class Police implements Observer {
     private Subject cook;
     private ArrayList<String> locations;
     private String notes;
     private ArrayList<String> people;
 
+    /**
+     * Constructor that creates a Police
+     * @param cook Observes subject cook
+     */
     public Police(Subject cook) {
         this.cook = cook;
         cook.registerObserver(this);
@@ -16,9 +23,15 @@ public class Police implements Observer {
         this.people = new ArrayList<>();
     }
 
+    /** 
+     * Updates the Police about the subjects location, description, and accomplices
+     * @param location location of the subject
+     * @param description description about the what the subject is doing
+     * @param accomplices accomplices that were with the subject
+     */
     public void update(String location, String description, ArrayList<String> accomplices) {
         this.locations.add(location);
-        
+
         // Append the new note to the existing notes
         if (!notes.isEmpty()) {
             notes += "\n";
@@ -35,7 +48,10 @@ public class Police implements Observer {
         }
     }
     
-
+    /** 
+     * Gets a log for the police about everything the from the subject
+     * @return String representation of everything from the subject
+     */
     public String getLog() {
         StringBuilder logBuilder = new StringBuilder("Locations:\n");
         for (String location : locations) {
