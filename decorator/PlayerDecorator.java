@@ -2,14 +2,26 @@ package decorator;
 
 import java.util.ArrayList;
 
+/**
+ * Class that decorates a Player
+ * @author abhinavk
+ */
 public abstract class PlayerDecorator extends Player {
     private Player player;
 
+    /**
+     * Constructor that creates a new ArrayList of a player to decorate
+     * @param player the player being decorated
+     */
     public PlayerDecorator(Player player) {
         super(new ArrayList<>(), player.getName());
         this.player = player;
     }
 
+    /**
+     * Integrates the decor to the warrior and returns the finished product
+     * @param decor ASCII representation of the warrior decorated
+     */
     protected void integrateDecor(ArrayList<String> decor) {
         // Get the existing lines of the warrior
         ArrayList<String> warriorLines = new ArrayList<>(player.lines);
