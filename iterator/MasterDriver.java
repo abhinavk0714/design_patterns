@@ -13,7 +13,7 @@ public class MasterDriver {
 		board.addTicket("Create Recipe Class", "Jim", 3);
 
 		board.startTicket("Create Git Repo");
-		board.finishTicket("Create Git Repo");
+	    board.finishTicket("Create Git Repo");
 		board.startTicket("Create all JSON FIles");
 		board.startTicket("Create Recipe Stub");
 
